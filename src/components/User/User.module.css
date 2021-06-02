@@ -1,0 +1,182 @@
+.notFound {
+    width: 100%;
+    /* padding: 331px 578px 269px 578px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 331px;
+}
+
+.notFoundContent {
+    width: 156px;
+    height: 165px;
+    display: flex;
+    align-items: flex-end;
+    background: url("../../assets/notFound.svg") no-repeat top 17px center;
+}
+
+.notFound p {
+    width: 210px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: center;
+    color: #808080;
+}
+
+.found {
+    display: flex;
+    padding: 28px 56px;
+}
+
+.userInfo {
+    width: 292px;
+}
+
+.userInfo img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    margin-bottom: 29px;
+}
+
+.name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.userInfo a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #0064EB;
+}
+
+.followInfo {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.followers, .following {
+    padding-left: 32px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.followers {
+    background: url("../../assets/followers.svg") no-repeat 0px -2px;
+}
+
+.following {
+    background: url("../../assets/following.svg") no-repeat 0px -2px;
+}
+
+.repEmpty {
+    margin: 20% auto;
+    width: 243px;
+    height: 165px;  
+    display: flex;
+    align-items: flex-end;
+    background: url("../../assets/rep.svg") no-repeat top 22px center;
+}
+
+.content p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 31px;
+    text-align: center;
+    color: #808080;
+}
+
+.repositories {
+    flex: 1;
+    height: 83vh;
+    position: relative;
+}
+
+@media screen and (max-width: 1350px) {
+    .userInfo {
+        width: 20%;
+    }
+    .found {
+        padding: 28px;
+    }
+    .userInfo img {
+        width: 90%;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 29px;
+    }
+    .repositories {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .followInfo {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .followers, .following {
+        display: inline-block;
+        padding-left: 32px;
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+}@media screen and (max-width: 550px) {
+    .found {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }   
+
+    .userInfo {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .userInfo img {
+        width: 50%;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 29px;
+    }
+
+    .repositories {
+        width: 100%;
+    }
+
+    .followInfo {
+        width: 60%;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .followInfo {
+        width: 80%;
+    }
+}

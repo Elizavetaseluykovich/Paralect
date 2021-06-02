@@ -1,0 +1,73 @@
+.header {
+    width: 100%;
+    background: #0064EB;
+    padding: 16px 41px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    display: inline-block;
+    width: 41px;
+    height: 40px;
+    margin-right: 22px;
+}
+
+.form {
+    width: 500px;
+    padding: 8px 14px;
+    background: #fff;
+    display: flex;
+    border-radius: 6px;
+    align-items: center;
+}
+
+.form input {
+    width: 90%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    outline: 0;
+    color: #000000;
+    border: none;
+}
+
+.form button {
+    background: none;
+    width: 24px;
+    height: 24px;
+    outline: 0;
+    border: none;
+    background: url("../../assets/search.svg") no-repeat center;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        width: 100%;
+        background: #0064EB;
+        padding: 16px 20px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+    }
+    .header a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        margin-right: 16px;
+    }
+    .header img {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        margin-right: 20px;
+    }
+    
+}
