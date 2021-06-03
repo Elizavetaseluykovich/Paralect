@@ -14,14 +14,19 @@ function User() {
     let per_page = Math.floor(((window.innerHeight)/180));
 
     let perPage =  public_repos > per_page*currentPage ? per_page : public_repos - per_page*currentPage;
-   
+
     useEffect(() => {
         dispatch(getUser(username));
-        dispatch(getRepositories(username, currentPage, perPage));
+        dispatch(getRepositories(username, currentPage, per_page));
+    }, [])
+
+    useEffect(() => {
+        dispatch(getUser(username));
+        dispatch(getRepositories(username, currentPage, 4));
     }, [username])
 
     useEffect(() => {
-        dispatch(getRepositories(username, currentPage, perPage));
+        dispatch(getRepositories(username, currentPage, 4));
     }, [currentPage])
 
     function numConvert(num) {
@@ -58,7 +63,7 @@ function User() {
                     <div className={styles.repositories}>
                         {repArr.length > 0 ? 
                             <>
-                                <RepositoriesList count={public_repos} per_page={per_page} array={repArr} handlePageClick={({selected}) => {dispatch({type: 'SET_PAGE', payload: selected + 1})}}/> 
+                                <RepositoriesList count={public_repos} per_page={perPage} array={repArr} handlePageClick={({selected}) => {dispatch({type: 'SET_PAGE', payload: selected + 1})}}/> 
                             </>
                         : 
                             <div className={styles.repEmpty}>

@@ -5,10 +5,7 @@ import Rectangle from '../../assets/Rectangle.svg';
 import styles from './RepositoriesList.module.css';
 
 function RepositoriesList({count, per_page, array, handlePageClick}) {
-    let item = {
-        name: 'blabla',
-        description: 'qwertyuioasdfghjzxcvbwertyuin'
-    }
+
     return (
         <>
             <h1>Repositories ({count})</h1>
