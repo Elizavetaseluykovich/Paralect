@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getUser, getRepositories } from '../../store/actions';
 import RepositoriesList from '../RepositoriesList/RepositoriesList';
 
-
 function User() {
     let {username} = useParams();
     const dispatch = useDispatch();
