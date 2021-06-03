@@ -30,9 +30,8 @@
     display: flex;
     list-style: none;
     position: absolute;
-    right: 100px;
     bottom: 0;
-    
+    right: 16%;
 }
 
 .pageItem {

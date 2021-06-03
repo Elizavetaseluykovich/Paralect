@@ -1,5 +1,5 @@
 import styles from './User.module.css'
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import {useParams} from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { getUser, getRepositories } from '../../store/actions';
@@ -17,25 +17,20 @@ function User() {
 
     useEffect(() => {
         dispatch(getUser(username));
-        dispatch(getRepositories(username, currentPage, per_page));
-    }, [])
-
-    useEffect(() => {
-        dispatch(getUser(username));
-        dispatch(getRepositories(username, currentPage, 4));
+        dispatch(getRepositories(username, currentPage, perPage > 0 ? perPage : per_page));
     }, [username])
 
     useEffect(() => {
-        dispatch(getRepositories(username, currentPage, 4));
+        dispatch(getRepositories(username, currentPage, perPage > 0 ? perPage : per_page));
     }, [currentPage])
 
     function numConvert(num) {
         if(num > 999 && num < 1000000){
-            return (num/1000).toFixed(1) + 'K'; // convert to K for number from > 1000 < 1 million 
+            return (num/1000).toFixed(1) + 'K'; 
         }else if(num > 1000000){
-            return (num/1000000).toFixed(1) + 'M'; // convert to M for number from > 1 million 
+            return (num/1000000).toFixed(1) + 'M'; 
         }else if(num < 900){
-            return num; // if value < 1000, nothing to do
+            return num; 
         }
     }
     return (

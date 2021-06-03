@@ -1,13 +1,11 @@
 import ReactPaginate from "react-paginate";
 import RepositoryItem from "../RepositoryItem/RepositoryItem";
-import prev from '../../assets/prev.svg';
-import Rectangle from '../../assets/Rectangle.svg';
 import styles from './RepositoriesList.module.css';
 
 function RepositoriesList({count, per_page, array, handlePageClick}) {
 
     return (
-        <>
+        <div className={styles.container}>
             <h1>Repositories ({count})</h1>
             {array.map(item => <RepositoryItem values={item}/>)}
             <ReactPaginate
@@ -27,7 +25,7 @@ function RepositoriesList({count, per_page, array, handlePageClick}) {
                 nextClassName={styles.nextLi}
                 nextLinkClassName={styles.next}
             /> 
-    </>
+    </div>
     )
 }
 

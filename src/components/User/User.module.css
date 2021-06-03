@@ -1,6 +1,5 @@
 .notFound {
     width: 100%;
-    /* padding: 331px 578px 269px 578px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +28,7 @@
 .found {
     display: flex;
     padding: 28px 56px;
+    height: calc(100vh - 72px);
 }
 
 .userInfo {
@@ -103,7 +103,6 @@
 
 .repositories {
     flex: 1;
-    height: 83vh;
     position: relative;
 }
 

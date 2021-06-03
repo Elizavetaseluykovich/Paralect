@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import styles from './Header.module.css';
 import logo from '../../assets/logo.svg';
 import {Link, useHistory} from "react-router-dom";
-import { useDispatch } from 'react-redux';
-import { getUser } from '../../store/actions';
 
 function Header() {
     let history = useHistory();
